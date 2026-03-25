@@ -1,4 +1,5 @@
 import car2 from "../assets/car2.png";
+import car from "../assets/car.png";
 
 import toyota from "../assets/logos/toyota.png";
 import bmw from "../assets/logos/bmw.png";
@@ -9,14 +10,12 @@ import renault from "../assets/logos/renault.png";
 
 export default function Home() {
   return (
-    <section className="relative flex flex-col-reverse md:flex-row items-center justify-between px-8 md:px-16 min-h-screen overflow-hidden">
+    <section className="relative flex flex-col-reverse md:flex-row items-center justify-between px-8 md:px-20 min-h-screen overflow-hidden">
 
-      {/* BLUE BACKGROUND */}
-      <div className="absolute top-0 right-0 w-full md:w-[35%] h-1/2 md:h-full bg-[#9EB6D4]"></div>
+      <div className="absolute top-0 right-0 w-full md:w-[45%] h-full bg-[#9EB6D4]"></div>
 
-      {/* LEFT CONTENT */}
-      <div className="max-w-xl z-10 mt-8 md:mt-0 text-center md:text-left">
-        <h1 className="text-4xl sm:text-5xl font-light">
+      <div className="max-w-lg z-10 mt-8 md:mt-0 text-center md:text-left">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-light leading-tight">
           Welcome to <span className="font-bold">AUTO MAROC</span>
         </h1>
 
@@ -27,30 +26,24 @@ export default function Home() {
           Explore your destination on your own terms and enjoy the freedom of having a car at your disposal.
         </p>
 
-        <button className="mt-8 border border-black px-6 py-3 rounded-lg hover:bg-black hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <button className="mt-8 border border-black px-6 py-3 rounded-lg hover:bg-black hover:text-white transition duration-300">
           Book now
         </button>
       </div>
 
-      {/* RIGHT IMAGE + LOGOS */}
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="relative z-10 flex flex-col items-center md:items-end w-full md:w-1/2">
 
-        {/* CAR IMAGE */}
-        <img
-          src={car2}
-          alt="car"
-          className="max-w-[450px] sm:max-w-[550px] md:max-w-[650px] w-full drop-shadow-2xl"
+        <img 
+          src={window.innerWidth < 768 ? car : car2}
+          className="w-full"
         />
-
-        {/* LOGOS */}
-        <div className="flex flex-wrap gap-6 mt-8 items-center justify-center opacity-70">
-          <img src={mercedes} alt="Mercedes logo" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
-          <img src={bmw} alt="BMW logo" className="w-12  hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
-          <img src={vw} alt="VW logo" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
-          <img src={toyota} alt="Toyota logo" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
-          <img src={dacia} alt="dacia logo" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
-          <img src={renault} alt="dacia logo" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
-
+        <div className="flex flex-wrap gap-6 mt-4 items-center justify-center md:justify-end opacity-70 md:-translate-y-12">
+          <img src={mercedes} alt="Mercedes" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
+          <img src={bmw} alt="BMW" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
+          <img src={vw} alt="VW" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
+          <img src={toyota} alt="Toyota" className="w-12 grayscale hover:grayscale-0 hover:scale-110 transition duration-300 cursor-pointer" />
+          <img src={renault} alt="Renault"className="w-12 h-12 object-contain rounded-full bg-white p-2 shadow-md"/>          
+          <img src={dacia} alt="Dacia"className="w-12 h-12 object-contain rounded-full bg-white p-2 shadow-md"/>
         </div>
 
       </div>

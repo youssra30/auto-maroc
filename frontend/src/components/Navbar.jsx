@@ -17,7 +17,6 @@ export default function Navbar() {
 
   return (
     <nav className="absolute top-0 left-0 w-full flex items-center justify-between px-16 py-4 z-50">
-
       {/* LEFT */}
       <div className="flex items-center gap-4 cursor-pointer">
         <img 
@@ -34,7 +33,7 @@ export default function Navbar() {
       {/* CENTER */}
       <div className="flex gap-12 text-gray-600 font-medium">
         <Link to="/">Home</Link>
-        <Link to="/review">Review</Link>
+        <Link to="/cars">Cars</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/about">About</Link>
       </div>
